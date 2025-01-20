@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock-Paper-Scissors</h1>
+        <div id="game">
+            <input type="text" id="room" placeholder="Room Code" />
+            <input type="text" id="username" placeholder="Your Name" />
+            <button onclick="createRoom()">Create Room</button>
+            <button onclick="joinRoom()">Join Room</button>
+            <div id="choices" class="hidden">
+                <button onclick="makeChoice('rock')">Rock</button>
+                <button onclick="makeChoice('paper')">Paper</button>
+                <button onclick="makeChoice('scissors')">Scissors</button>
+            </div>
+            <h2 id="players"></h2>
+            <h3 id="result"></h3>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
